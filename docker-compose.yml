@@ -1,0 +1,17 @@
+name: ws_bridge
+
+services:
+  ws_bridge:
+    image: wjcl3gj94/toolkitmcam:v1.0
+    restart: always
+
+    networks:
+      - ai
+
+    ports:
+      - "8080:8080"
+      - "9001:9001"
+
+networks:
+  ai:
+    external: true
